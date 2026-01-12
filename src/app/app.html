@@ -1,5 +1,10 @@
 <h1>Lista de productos</h1>
 
-<input type="text" [(ngModel)]="texto" placeholder="Escribe algo">
+<input type="text" [(ngModel)]="nuevoProducto" placeholder="Nuevo producto">
+<button (click)="agregarProducto()">Agregar</button>
 
-<p>Lo que escribes: {{ texto }}</p>
+<ul>
+  <li *ngFor="let p of productos">
+    {{ p }}
+  </li>
+</ul>

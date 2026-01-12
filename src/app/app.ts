@@ -9,5 +9,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class App {
-  texto = '';
+
+  nuevoProducto = '';
+  productos: string[] = ['Zapatos', 'Camisa', 'Pantalón'];
+
+  agregarProducto() {
+    if (this.nuevoProducto.trim() !== '') {
+      this.productos.push(this.nuevoProducto);
+      this.nuevoProducto = '';
+    }
+  }
+
 }
