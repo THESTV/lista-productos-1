@@ -7,13 +7,15 @@
 
 <div *ngIf="mostrar">
 
-  <input type="text" [(ngModel)]="nuevoProducto" placeholder="Nuevo producto">
+  <input
+    type="text"
+    [(ngModel)]="nuevoProducto"
+    placeholder="Nuevo producto">
   <button (click)="agregarProducto()">Agregar</button>
 
-  <ul>
-    <li *ngFor="let p of productos">
-      {{ p }}
-    </li>
-  </ul>
+  <app-producto-card
+    *ngFor="let p of productos"
+    [nombre]="p">
+  </app-producto-card>
 
 </div>

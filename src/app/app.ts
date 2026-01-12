@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule, DatePipe, UpperCasePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { ProductoCardComponent } from './producto-card/producto-card';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,10 @@ import { CommonModule, DatePipe, UpperCasePipe } from '@angular/common';
   imports: [
     FormsModule,
     CommonModule,
-    DatePipe,
-    UpperCasePipe
+    ProductoCardComponent
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'] // ✅ PLURAL
 })
 export class App {
 
@@ -34,5 +34,4 @@ export class App {
   cambiar() {
     this.mostrar = !this.mostrar;
   }
-
 }
