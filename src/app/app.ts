@@ -14,18 +14,17 @@ import { ProductoCardComponent } from './producto-card/producto-card';
   templateUrl: './app.html',
   styleUrls: ['./app.css'] // ✅ PLURAL
 })
-export class App {
-
+export class AppComponent {
   titulo = 'Lista de productos';
   fecha = new Date();
 
   mostrar = true;
-
   nuevoProducto = '';
+
   productos: string[] = ['Zapatos', 'Camisa', 'Pantalón'];
 
   agregarProducto() {
-    if (this.nuevoProducto.trim() !== '') {
+    if (this.nuevoProducto.trim()) {
       this.productos.push(this.nuevoProducto);
       this.nuevoProducto = '';
     }
